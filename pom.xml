@@ -7,6 +7,9 @@
     <groupId>de.juniorjacki.utils</groupId>
     <artifactId>logger</artifactId>
     <version>0.0.1</version>
+    <name>Logger</name>
+    <url>https://github.com/JuniorJacki/Logger</url>
+    <description>Logging Util</description>
 
     <developers>
         <developer>
