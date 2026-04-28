@@ -1,6 +1,7 @@
 package de.juniorjacki.utils.logger.processing;
 
 
+import de.juniorjacki.utils.logger.FileWriter;
 import de.juniorjacki.utils.logger.Log;
 
 import java.util.concurrent.BlockingQueue;
@@ -42,6 +43,7 @@ public final class QueueProcessor {
         try {
             worker.join(); //blocks until queue is empty
         } catch (InterruptedException ignored) {}
+        FileWriter.disable();
         System.out.println("Shut down");
     }
 }

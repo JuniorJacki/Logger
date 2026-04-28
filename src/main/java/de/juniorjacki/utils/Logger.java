@@ -8,10 +8,6 @@ import de.juniorjacki.utils.logger.Log;
 import java.time.Instant;
 
 public final class Logger {
-
-
-
-
     private static void logAsync(Log log) {
         QueueProcessor.enqueue(log);
     }
