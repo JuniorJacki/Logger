@@ -38,12 +38,10 @@ public final class QueueProcessor {
     }
 
     public static void shutdownAndWait() {
-        System.out.println("Shutting down");
         running.set(false);
         try {
             worker.join(); //blocks until queue is empty
         } catch (InterruptedException ignored) {}
         FileWriter.disable();
-        System.out.println("Shut down");
     }
 }
