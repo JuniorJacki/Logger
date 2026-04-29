@@ -106,6 +106,14 @@ public final class Logger {
     public static void debugWithoutSourceBlocking(Object... msgs) { log(Level.DEBUG_ERROR, false, true, msgs); }
 
     /**
+     * Logs a DEBUG_ERROR-level message asynchronously.
+     *
+     * @param msgs message objects to log
+     */
+    public static void debugError(Object... msgs) { log(Level.DEBUG, true, false, msgs); }
+
+
+    /**
      * Logs a DEBUG_ERROR-level message synchronously.
      *
      * @param msgs message objects to log
