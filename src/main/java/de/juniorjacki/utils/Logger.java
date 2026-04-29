@@ -99,11 +99,32 @@ public final class Logger {
     public static void debugWithoutSource(Object... msgs) { log(Level.DEBUG, false, false, msgs); }
 
     /**
-     * Logs a DEBUG-level message synchronously without including the caller source.
+     * Logs a DEBUG_ERROR-level message synchronously without including the caller source.
      *
      * @param msgs message objects to log
      */
-    public static void debugWithoutSourceBlocking(Object... msgs) { log(Level.DEBUG, false, true, msgs); }
+    public static void debugWithoutSourceBlocking(Object... msgs) { log(Level.DEBUG_ERROR, false, true, msgs); }
+
+    /**
+     * Logs a DEBUG_ERROR-level message synchronously.
+     *
+     * @param msgs message objects to log
+     */
+    public static void debugErrorBlocking(Object... msgs) { log(Level.DEBUG_ERROR, true, true, msgs); }
+
+    /**
+     * Logs a DEBUG_ERROR-level message asynchronously without including the caller source.
+     *
+     * @param msgs message objects to log
+     */
+    public static void debugErrorWithoutSource(Object... msgs) { log(Level.DEBUG_ERROR, false, false, msgs); }
+
+    /**
+     * Logs a DEBUG_ERROR-level message synchronously without including the caller source.
+     *
+     * @param msgs message objects to log
+     */
+    public static void debugErrorWithoutSourceBlocking(Object... msgs) { log(Level.DEBUG_ERROR, false, true, msgs); }
 
 
     /**

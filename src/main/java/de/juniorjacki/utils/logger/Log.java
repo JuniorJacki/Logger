@@ -39,6 +39,7 @@ public class Log {
     // ANSI Farben
     private static final String RESET = "\u001B[0m";
     private static final String RED = "\u001B[31m";
+    private static final String SecondRED = "\u001B[91m";
     private static final String YELLOW = "\u001B[33m";
     private static final String CYAN = "\u001B[36m";
 
@@ -75,6 +76,7 @@ public class Log {
     private static String color(Level level, String msg) {
         return switch (level) {
             case ERROR -> RED + msg + RESET;
+            case DEBUG_ERROR -> SecondRED + msg + RESET;
             case WARNING -> YELLOW + msg + RESET;
             case DEBUG -> CYAN + msg + RESET;
             default -> msg;

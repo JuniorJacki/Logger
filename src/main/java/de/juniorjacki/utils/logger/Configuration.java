@@ -4,7 +4,7 @@ public final class Configuration {
 
     public static volatile LogConsumer activeConsumer;
 
-    private static volatile Level minLevel = Level.DEBUG;
+    private static volatile Level minLevel = Level.DEBUG_ERROR;
 
     public static void setMinLevel(Level level) {
         minLevel = level;
