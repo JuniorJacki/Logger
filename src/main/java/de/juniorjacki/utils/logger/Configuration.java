@@ -1,8 +1,11 @@
 package de.juniorjacki.utils.logger;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 public final class Configuration {
 
     public static volatile LogConsumer activeConsumer;
+    public static final AtomicBoolean overrideDisableSourcePrinting = new AtomicBoolean(false);
 
     private static volatile Level minLevel = Level.DEBUG_ERROR;
 

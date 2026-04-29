@@ -30,7 +30,7 @@ public class Log {
             externalLogged = Configuration.activeConsumer.log(timestamp.getEpochSecond(),source, level, content);
         }
         if (!externalLogged || FileWriter.isEnabled()) {
-            String logMsg = formatTime(timestamp) + " [" + level.name() + "] " + (includeSource ? source + ": " : "") + content;
+            String logMsg = formatTime(timestamp) + " [" + level.name() + "] " + (Configuration.overrideDisableSourcePrinting.get() ? "" : includeSource ? source + ": " : "") + content;
             FileWriter.write(logMsg);
             if (!externalLogged) System.out.println(color(level,logMsg));
         }
