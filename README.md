@@ -35,7 +35,7 @@ A modern, color‑enabled and extensible Java logger focused on clarity, perform
 
 ```xml
 <dependency>
-    <groupId>de.juniorjacki.utils.logger</groupId>
+    <groupId>de.juniorjacki.utils</groupId>
     <artifactId>logger</artifactId>
     <version>0.1.2</version>
 </dependency>
